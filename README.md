@@ -1,6 +1,3 @@
-import os, textwrap
-BASE = "/content/drive/MyDrive/trpl-ai-capstone"
-readme = textwrap.dedent(""" 
 # M1-Telco-Churn-Prediction
 Proyek prediksi customer churn Telco untuk Tugas M1 - Final Block
 
@@ -36,8 +33,3 @@ Metrik utama yang digunakan untuk menilai performa model adalah **F1-Score** pad
 ## 4 Etika & Privasi
 Risiko & Mitigasi: 
 Risiko Etika: Model klasifikasi rentan terhadap bias diskriminatif jika fitur seperti gender atau SeniorCitizen secara tidak adil memengaruhi keputusan churn atau jika penawaran retensi hanya ditargetkan pada kelompok tertentu. Risiko Privasi: Data yang digunakan (riwayat tagihan, penggunaan layanan) bersifat sensitif. Mitigasi: Kami akan anonimisasi kolom customerID di awal proses. Kami akan secara berkala melakukan audit fairness metric untuk memastikan model tidak mendiskriminasi berdasarkan fitur demografi, dan kami akan membatasi akses ke data mentah hanya pada tim proyek inti.
-""")
-os.makedirs(BASE, exist_ok=True)
-with open(os.path.join(BASE, "README.md"), "w") as f:
-    f.write(readme)
-print("README.md dibuat di:", os.path.join(BASE, "README.md"))
